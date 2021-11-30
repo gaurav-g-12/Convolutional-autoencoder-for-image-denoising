@@ -4,6 +4,11 @@
 ## Introduction
 Denoising autoencoders create a corrupted copy of the input by introducing some noise. This helps to avoid the autoencoders to copy the input to the output without learning features about the data. These autoencoders take a partially corrupted input while training to recover the original undistorted input. The model learns a vector field for mapping the input data towards a lower dimensional manifold which describes the natural data to cancel out the added noise.
 
+It was introduced to achieve good representation. Such a representation is one that can be obtained robustly from a corrupted input and that will be useful for recovering the corresponding clean input.
+Corruption of the input can be done randomly by making some of the input as zero. Remaining nodes copy the input to the noised input.
+Minimizes the loss function between the output node and the corrupted input.
+Setting up a single-thread denoising autoencoder is easy.
+
 ## Libraries Required
 Python > 3.6
 
